@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 # Replace this with your actual MongoDB Atlas connection string from your cloud console
 # Example format: mongodb+srv://<username>:<password>@cluster0.xxxxxx.mongodb.net/?retryWrites=true&w=majority
-MONGO_URI = "YOUR_MONGODB_ATLAS_CONNECTION_STRING_HERE"
+MONGO_URI = os.getenv("MONGO_URI")
 
 try:
     # Initialize MongoDB Client
